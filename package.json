@@ -34,5 +34,8 @@
   "scripts": {
     "test": "./node_modules/.bin/zuul --local 8080 --ui mocha-bdd -- test/test.js",
     "saucetest": "./node_modules/.bin/zuul --ui mocha-bdd -- test/test.js"
+  },
+  "dependencies": {
+    "basil.js": "^0.4.4"
   }
 }
