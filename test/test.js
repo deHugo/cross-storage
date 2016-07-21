@@ -59,7 +59,7 @@ describe('CrossStorageClient', function() {
       return storage.del('key1', 'key2');
     })
     .then(fn)
-    ['catch'](fn);
+    .catch(fn);
   };
 
   describe('Constructor', function() {
@@ -67,7 +67,7 @@ describe('CrossStorageClient', function() {
       expect(storage._origin).to.be(origin);
     });
 
-    it("uses window.location's origin if passed a relative path", function() {
+    it('uses window.location\'s origin if passed a relative path', function() {
       var storage, origin;
       storage = new CrossStorageClient('hub.html');
       origin = window.location.protocol + '//' + window.location.host;
@@ -272,7 +272,7 @@ describe('CrossStorageClient', function() {
 
       var delay = function() {
         // Delay by 100ms
-        return new Promise(function(resolve, reject) {
+        return new Promise(function(resolve) {
           setTimeout(resolve, 100);
         });
       };
